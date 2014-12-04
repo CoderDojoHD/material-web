@@ -9,6 +9,8 @@ set JSFILES=*.js
 set JPGFILES=*.jpg
 echo user %USER%> ftpcmd.dat
 echo %PASSWD%>> ftpcmd.dat
+echo mkdir %MYNAME%>> ftpcmd.dat
+echo cd %MYNAME%>> ftpcmd.dat
 echo prompt>> ftpcmd.dat
 echo mdel *>> ftpcmd.dat
 echo mput %HTMLFILES%>> ftpcmd.dat
@@ -18,4 +20,5 @@ echo mput %JPGFILES%>> ftpcmd.dat
 echo quit>> ftpcmd.dat
 @echo on
 ftp -n -s:ftpcmd.dat %HOST%
+@echo off
 del ftpcmd.dat
