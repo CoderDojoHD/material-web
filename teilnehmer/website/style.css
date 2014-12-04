@@ -1,7 +1,12 @@
 body {
-  color: blue;
+  background-color: black;
+  color: white;
 }
 
 h1 {
   color: gray;
+}
+
+#logo {
+  height: 100px;
 }

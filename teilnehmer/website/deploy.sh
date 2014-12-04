@@ -6,6 +6,7 @@ PASSWD='dojocoder'
 HTMLFILES='*.html'
 CSSFILES='*.css'
 JSFILES='*.js'
+JPGFILES='*.jpg'
 
 ftp -n $HOST <<END_SCRIPT
 quote USER $USER
@@ -17,6 +18,7 @@ mdel *
 mput $HTMLFILES
 mput $CSSFILES
 mput $JSFILES
+mput $JPGFILES
 quit
 END_SCRIPT
 exit 0
