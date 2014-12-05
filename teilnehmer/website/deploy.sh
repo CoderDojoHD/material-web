@@ -7,6 +7,8 @@ HTMLFILES='*.html'
 CSSFILES='*.css'
 JSFILES='*.js'
 JPGFILES='*.jpg'
+GIFFILES='*.gif'
+PNGFILES='*.png'
 
 ftp -n $HOST <<END_SCRIPT
 quote USER $USER
@@ -19,6 +21,8 @@ mput $HTMLFILES
 mput $CSSFILES
 mput $JSFILES
 mput $JPGFILES
+mput $GIFFILES
+mput $PNGFILES
 quit
 END_SCRIPT
 exit 0
