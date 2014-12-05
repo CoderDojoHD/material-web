@@ -2,11 +2,14 @@
 
   <head>
     <title>Sonderzeichen</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta>
   </head>
 
   <body>
     <p>
-      Manche Sonderzeichen m&uuml;ssen kodiert werden, u.a:
+      Manche Sonderzeichen m&uuml;ssen kodiert (in einer besonderen
+      Art angegeben) werden, u.a:
     </p>
 
     <p>
@@ -31,7 +34,17 @@
     </p>
 
     <p>
-      Eine Liste aller Sonderzeichen findet ihr <a href="http://www.w3schools.com/html/html_entities.asp">hier</a>
+      Eine Liste aller Sonderzeichen - Entities genannt - findet ihr
+      <a href="http://www.w3schools.com/html/html_entities.asp">hier</a>
+    </p>
+
+    <p>
+      Wenn der &lt;head&gt;-Bereich einer Seite die folgende Zeile enthält, dann musst du
+      manche Zeichen nicht mehr kodieren:
+      <pre>
+        &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;&lt;/meta&gt;
+      </pre>
+      Unter anderem: ä ö ü Ä Ö Ü ß
     </p>
   </body>
 
