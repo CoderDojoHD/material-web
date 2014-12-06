@@ -9,6 +9,7 @@ set JSFILES=*.js
 set JPGFILES=*.jpg
 set GIFFILES=*.gif
 set PNGFILES=*.png
+pushd website
 echo user %USER%> ftpcmd.dat
 echo %PASSWD%>> ftpcmd.dat
 echo mkdir %MYNAME%>> ftpcmd.dat
@@ -26,3 +27,4 @@ echo quit>> ftpcmd.dat
 ftp -n -s:ftpcmd.dat %HOST%
 @echo off
 del ftpcmd.dat
+popd

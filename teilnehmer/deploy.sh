@@ -10,6 +10,7 @@ JPGFILES='*.jpg'
 GIFFILES='*.gif'
 PNGFILES='*.png'
 
+pushd website
 ftp -n $HOST <<END_SCRIPT
 quote USER $USER
 quote PASS $PASSWD
@@ -25,4 +26,5 @@ mput $GIFFILES
 mput $PNGFILES
 quit
 END_SCRIPT
+popd
 exit 0
