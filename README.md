@@ -3,16 +3,18 @@ material-web
 
 Material und Übungen, um den Teilnehmern die Grundlagen von Web-Seiten und Applikationen beizubringen.
 
-Voraussetzungen:
+# Installation
+
+##Voraussetzungen:
 - Installation von atom.io
 - Installation der packages aus atom/ nach <userdir>/.atom/packages
 - Lokale Kopie des Verzeichnis teilnehmer/
 
-Website-Deployment
+##Website-Deployment
 - Plattform-Skripte in teilnehmer/ 
   - Linux: deploy.sh
   - Mac: deploy.command
   - Windows: deploy.bat
 - Bitte vorher die Variable MYNAME anpassen!
 - Skripte kopieren (per ftp) den inhalt von website/ auf den Server coderdojo.rechnerzeit.net
-- Zugriff auf Projekt via http://coderdojo.rechnerzeit.ne/<MYNAME>
+- Zugriff auf Projekt via http://coderdojo.rechnerzeit.ne/MYNAME
