@@ -7,7 +7,7 @@ Material und Übungen, um den Teilnehmern die Grundlagen von Web-Seiten und Appl
 
 ##Voraussetzungen
 - Installation von atom.io
-- Installation (Entzippen und Kopieren) der Atom-Packages aus atom/ nach <userdir>/.atom/packages
+- Installation (Entzippen und Kopieren) der Atom-Packages aus atom/*.zip nach <userdir>/.atom/packages
 - Lokale Kopie des Verzeichnis teilnehmer/
 
 ##Website-Deployment
