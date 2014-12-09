@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <link rel="stylesheet" href="main.css" />
+    <title>JavaScript - Funktionen und Buttons</title>
+  </head>
+
+  <body>
+    <p>
+      In JavaScript kann man auch "Funktionen" (kleine Programmstücke
+      mit Namen) definieren, die dann beim Drücken eines Buttons
+      ausgeführt werden.
+    </p>
+
+    <button onClick="button1Clicked()">Button 1</button>
+    <button onClick="button2Clicked()">Button 2</button>
+    <p id="result">No button clicked</p>
+
+    <p>
+      Damit die Funktion aufgerufen wird, muss der Aufruf im onClick-Attribut
+      des HTML-Elements eingetragen werden.
+    </p>
+
+    <script>
+      function button1Clicked() {
+        buttonClicked(1)
+      }
+
+      function button2Clicked() {
+        buttonClicked(2)
+      }
+
+      function buttonClicked(buttonNumber) {
+        var result = document.getElementById("result");
+        result.innerHTML = "Button " + buttonNumber +
+          " clicked"
+      }
+    </script>
+
+  </body>
+
+</html>

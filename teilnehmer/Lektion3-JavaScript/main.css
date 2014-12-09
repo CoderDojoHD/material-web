@@ -1,0 +1,18 @@
+body {
+  background-color: lightgray;
+  font-family: Arial;
+}
+
+button {
+  width: 90px;
+  height: 30px;
+  border: solid darkgray 4px;
+  font-size: 11pt;
+  font-weight: bold;
+}
+
+#result {
+  border: solid black 1px;
+  padding: 5px;
+  width: 200px;
+}

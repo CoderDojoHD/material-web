@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <link rel="stylesheet" href="main.css" />
+    <title>JavaScript - Uhrzeit beim Laden</title>
+  </head>
+
+  <body>
+    <p>
+      JavaScript ist eine Programmiersprache, mit der man Webseiten
+      zum Leben erwecken kann. Falls alles funktioniert dann
+      müsste in der nächsten Zeile die aktuelle Uhrzeit erscheinen.
+      Dies geht nicht im HTML-Preview des Editors.
+    </p>
+    <p id="result">
+      Aktuelle Zeit: <span id="zeit">???</span>
+    </p>
+    <p>
+      Wie du siehst, kann man mit JavaScript den Inhalt von Elementen
+      einer Webseite verändern. Dass das Programm am Ende der
+      Seite erscheint ist wichtig, sonst wären wir nicht sicher,
+      dass die Seite auch schon "geladen" wurde, wenn das Programm
+      ausgeführt wird.
+    </p>
+
+    <script>
+      var zeit = document.getElementById("zeit");
+      var jetzt = new Date().toLocaleFormat("%H:%M.%S");
+      zeit.innerHTML = jetzt;
+    </script>
+
+  </body>
+
+</html>
