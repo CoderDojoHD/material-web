@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <title>Inline Styling</title>
+  </head>
+
+  <body style="background-color: lightgray; font-family: Arial">
+    Jedes HTML-Element kann über ein style-Attribut sein Aussehen
+    verändern. Man kann beispielsweise:
+
+    <p style="color: blue; font-size: 20pt">
+      Die Farbe und die Größe eines Textes verändern.
+    </p>
+
+    <p style="font-family: Courier; background-color: yellow; font-size: 20pt">
+      Einen anderen Zeichensatz auswählen und die Texthintergrundfarbe
+      verändern.
+    </p>
+
+    <p style="font-size: 20pt">
+      Auch <span style="font-weight: bold">Teile eines Satzes</span>      oder
+      <span style="font-weight: light">einzelne</span>
+      <span style="font-style: italic">Wörter</span> unterschiedlich
+      gestalten.
+    </p>
+
+    <p style="margin: 0.5cm; padding: 1cm; border: solid green 1px">
+      Und man kann Elemente mit Leerraum (padding und margin) und Grenzlinien
+      (border) versehen. "Margin" meint den Raum außerhalb der
+      "Border", "Padding" den Raum innerhalb.
+    </p>
+
+    <h3>Größenangaben</h3>
+    Es gibt unterschiedliche Größeneinheiten:
+    <ul>
+      <li style="font-size: 20pt">
+        Punkte (z.B. 20pt) stammen aus der Typographie.
+      </li>
+      <li style="font-size: 20px">
+        Pixel (z.B. 20px) beziehen sich auf Bildschirmpunkte.
+      </li>
+      <li style="font-size: 0.5cm">
+        Zentimeter (z.B. 0.5cm) sind eben Zentimerter.
+      </li>
+      <li style="font-size: 2em">
+        EM (z.B. 1.5em) bezieht sich auf die aktuelle Schriftgröße.
+      </li>
+    </ul>
+    Damit kann ich auch die Gesamtgröße eines Elements festlegen:
+    <p style="width: 5cm; height: 3cm; border: solid black 1px">
+      Dieser Absatz ist 5cm breit und 3cm hoch.
+      Dieser Absatz ist 5cm breit und 3cm hoch.
+      Dieser Absatz ist 5cm breit und 3cm hoch.
+      Dieser Absatz ist 5cm breit und 3cm hoch.
+      Dieser Absatz ist 5cm breit und 3cm hoch.
+    </p>
+
+    Aber nur solange auch <span style="font-size: 1cm">der ganze Inhalt</span> hinein passt.
+
+  </body>
+
+</html>
