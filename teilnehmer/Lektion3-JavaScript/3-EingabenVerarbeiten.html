@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <link rel="stylesheet" href="main.css" />
+    <title>JavaScript - Eingaben verarbeiten</title>
+  </head>
+
+  <body>
+    <p>
+      Und natürlich kann man auch Werte aus Eingabefeldern auslesen
+      und in den Funktion verwenden.
+    </p>
+
+    <div class="eingaben">
+      Dein Name:
+      <input type="text" id="name">
+      <button onClick="fertigClicked()">Fertig</button>
+    </div>
+    <p id="result">Noch nichts passiert</p>
+
+    <div class="eingaben">
+      <div>
+        Zahl 1:
+        <input type="number" id="zahl1" value="1">
+      </div>
+      <div>
+        Zahl 2:
+        <input type="number" id="zahl2" value="2">
+      </div>
+      <button onClick="rechneClicked()">MULT</button>
+    </div>
+
+    <script>
+      function fertigClicked() {
+        var name = document.getElementById("name").value;
+        setResult("Hallo, " + name)
+      }
+
+      function rechneClicked() {
+        var zahl1 = document.getElementById("zahl1").value;
+        var zahl2 = document.getElementById("zahl2").value;
+        setResult(zahl1 * zahl2)
+      }
+
+      function setResult(contents) {
+        var result = document.getElementById("result");
+        result.innerHTML = contents;
+      }
+    </script>
+
+  </body>
+
+</html>
