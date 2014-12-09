@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <link rel="stylesheet" href="3-ExternalStyling.css" />
+    <title>Externes Styling</title>
+  </head>
+
+  <body>
+    <p>
+      Eine noch bessere Trennung zwischen Inhalt und Aussehen einer
+      Webseite erreicht man, indem alle Style-Regeln in eine
+      externe Datei ausgelagert werden:
+      <a href="3-ExternalStyling.css">3-ExternalStyling.css</a>.
+    </p>
+
+    <p>
+      Dies geschieht durch die Zeile
+    </p>
+    <pre>&ltlink rel="stylesheet" href="3-ExternalStyling.css"&gt;</pre>
+    <p>
+      im HEAD der Datei. Alles andere bleicht gleich:
+    </p>
+
+    <p id="meinP">
+      Dieser Absatz bekommt sein Styling durch seine ID "meinP". Alle
+      Styles, die er hat, weil er ein "p" ist, bleiben aber erhalten!
+      IDs dürfen pro Webseite nur ein einziges mal vorkommen.
+    </p>
+
+    <p class="gerahmt">
+      Dieser Absatz sieht so aus, weil er zur
+      <em>Klasse</em> "gerahmt" gehört.
+    </p>
+
+    <p>
+      Style-Klassen kann man auch kombinieren:
+      <ul>
+        <li class="wichtig">Wichtig und deshalb größer.</li>
+        <li class="gefaehrlich">Gefährlich und daher rot.</li>
+        <li class="gefaehrlich wichtig">Gefährlich und wichtig!</li>
+        <li class="gerahmt">"Gerahmt" aber auch vom Typ &lt;li&gt;, daher greift
+          zusätzlich die Regel "li.gerahmt"
+        </li>
+      </ul>
+    </p>
+
+  </body>
+
+</html>

@@ -1,0 +1,39 @@
+body {
+  background-color: lightgray;
+  font-family: Arial;
+  font-size: 14pt;
+}
+
+em {
+  font-weight: bold;
+}
+
+p {
+  font-size: 12pt;
+}
+
+#meinP {
+  font-family: Courier;
+  background-color: yellow;
+}
+
+.gerahmt {
+  margin: 0.5cm;
+  padding: 1cm;
+  border: solid green 1px;
+  width: 6cm;
+}
+
+.wichtig {
+  font-size: 2em;
+}
+
+.gefaehrlich {
+  color: red;
+  font-weight: bold;
+}
+
+li.gerahmt {
+  margin: 0;
+  padding: 0.2cm;
+}
