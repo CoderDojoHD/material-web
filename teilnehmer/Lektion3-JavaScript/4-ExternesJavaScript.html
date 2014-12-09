@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <link rel="stylesheet" href="main.css" />
+    <title>JavaScript - Auslagern in eigene Datei</title>
+  </head>
+
+  <body>
+    <p>
+      Wenn man viel JavaScript hat, dann sollte man es in eine
+      <a href="4-ExternesJavaScript.js">eigene Datei</a> auslagern.
+    </p>
+
+    <p>
+      Und wenn man möchte, kann man die Verknüpfung zwischen Buttons
+      und den Funktionen im Programmcode vornehmen.
+    </p>
+
+    <div class="eingaben">
+      Dein Name:
+      <input type="text" id="name">
+      <button id="fertigButton">Fertig</button>
+    </div>
+    <p id="result">Noch nichts passiert</p>
+
+    <div class="eingaben">
+      <div>
+        Zahl 1:
+        <input type="number" id="zahl1" value="1">
+      </div>
+      <div>
+        Zahl 2:
+        <input type="number" id="zahl2" value="2">
+      </div>
+      <button id="rechneButton">MULT</button>
+    </div>
+
+    <script src="4-ExternesJavaScript.js"></script>
+
+  </body>
+
+</html>
