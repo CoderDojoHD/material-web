@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <style>
+      body {
+        background-color: lightgray;
+        font-family: Arial;
+        font-size: 14pt;
+      }
+      em {
+        font-weight: bold;
+      }
+      p {
+        color: blue;
+        font-size: 20pt;
+      }
+      #meinP {
+        font-family: Courier;
+        background-color: yellow;
+      }
+      .gerahmt {
+        margin: 0.5cm;
+        padding: 1cm;
+        border: solid green 1px;
+        width: 6cm;
+      }
+      .wichtig {
+        font-size: 2em;
+      }
+      .gefaehrlich {
+        color: red;
+        font-weight: bold;
+      }
+      li.gerahmt {
+        margin: 0;
+        padding: 0.2cm;
+      }
+    </style>
+    <title>Internes Styling</title>
+  </head>
+
+  <body>
+    Jedes Element einzeln zu stylen ist sehr mühsam. Außerdem möchte
+    man gerne das Aussehen einer Seite vom Inhalt trennen, um
+    beides unabhängig voneinander verändern zu können. Aus diesem
+    Grund kann man alle
+    <em>Style-Regeln</em> in einen eigenen Bereich im HEAD des Dokuments
+    verlagern. Die
+
+    <p>
+      Dieser Absatz wird durch Style-Informationen für den Elementtyp
+      "p" gestylt.
+    </p>
+
+    <p id="meinP">
+      Dieser Absatz bekommt sein Styling durch seine ID "meinP". Alle
+      Styles, die er hat, weil er ein "p" ist, bleiben aber erhalten!
+      IDs dürfen pro Webseite nur ein einziges mal vorkommen.
+    </p>
+
+    <p class="gerahmt">
+      Dieser Absatz sieht so aus, weil er zur
+      <em>Klasse</em> "gerahmt" gehört.
+    </p>
+
+    <p>
+      Style-Klassen kann man auch kombinieren:
+      <ul>
+        <li class="wichtig">Wichtig und deshalb größer.</li>
+        <li class="gefaehrlich">Gefährlich und daher rot.</li>
+        <li class="gefaehrlich wichtig">Gefährlich und wichtig!</li>
+        <li class="gerahmt">"Gerahmt" aber auch vom Typ &lt;li&gt;, daher greift zusätzlich
+          die Regel "li.gerahmt"
+        </li>
+      </ul>
+    </p>
+
+  </body>
+
+</html>
