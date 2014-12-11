@@ -7,16 +7,24 @@ var lastOperator = null;
 
 function initialize() {
   resetCalculator();
-  document.getElementById("clearButton").onclick = clearClicked;
-  document.getElementById("evalButton").onclick = evalClicked;
-  document.getElementById("plusButton").onclick = plusClicked;
+  addClickEvent(document.getElementById("clearButton"), clearClicked);
+  addClickEvent(document.getElementById("evalButton"), evalClicked);
+  addClickEvent(document.getElementById("plusButton"), plusClicked);
   var digits = document.getElementsByClassName("digit");
   for (var i = 0; i < digits.length; i++) {
     var digitSpan = digits[i];
-    digitSpan.onclick = function (event) {
+    addClickEvent(digitSpan, function (event) {
       var digit = event.target.innerHTML;
       digitClicked(digit);
-    }
+    });
+  }
+}
+
+function addClickEvent(element, handler) {
+  if (typeof TouchEvent != "undefined") {
+    element.ontouchstart = handler;
+  } else {
+    element.onclick = handler;
   }
 }
 
