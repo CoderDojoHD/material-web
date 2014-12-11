@@ -3,6 +3,7 @@ initialize();
 var displayText = "";
 var storedNumber = 0;
 var wasNumberStored = false;
+var lastOperator = null;
 
 function initialize() {
   resetCalculator();
@@ -23,6 +24,7 @@ function resetCalculator() {
   displayText = "";
   storedNumber = 0;
   wasNumberStored = false;
+  lastOperator = null;
   updateDisplay();
 }
 
@@ -34,6 +36,7 @@ function clearClicked() {
 function plusClicked() {
   console.log("+");
   evaluateWithPlus();
+  lastOperator = "+";
 }
 
 function evaluateWithPlus() {
@@ -49,7 +52,7 @@ function evaluateWithPlus() {
 function evalClicked() {
   console.log("=");
   evaluateWithPlus();
-  storedNumber = 0;
+  lastOperator = "=";
 }
 
 function digitClicked(digit) {
@@ -57,6 +60,8 @@ function digitClicked(digit) {
   if (wasNumberStored) {
     displayText = "";
     wasNumberStored = false;
+    if (lastOperator == "=")
+      storedNumber = 0;
   }
   if (displayText.length == 10)
     return;
