@@ -43,22 +43,29 @@ function clearClicked() {
 
 function plusClicked() {
   console.log("+");
-  evaluateWithPlus();
+  if (!wasNumberStored) {
+    evaluateWithPlus();
+  }
   lastOperator = "+";
 }
 
 function evaluateWithPlus() {
-  if (wasNumberStored)
-    return;
   var displayedNumber = parseInt(displayText);
   storedNumber = storedNumber + displayedNumber;
   wasNumberStored = true;
-  displayText = storedNumber.toString();
+  if (storedNumber <= 99999999999) {
+    displayText = storedNumber.toString();
+  } else {
+    displayText = "error";
+    storedNumber = 0;
+  }
   updateDisplay();
 }
 
 function evalClicked() {
   console.log("=");
+  if (lastOperator == "=")
+    return;
   evaluateWithPlus();
   lastOperator = "=";
 }
