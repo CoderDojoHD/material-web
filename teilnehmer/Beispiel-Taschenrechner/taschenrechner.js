@@ -21,11 +21,17 @@ function initialize() {
 }
 
 function addClickEvent(element, handler) {
-  if (typeof TouchEvent != "undefined") {
+  if (browserSupportsTouchEvents()) {
     element.ontouchstart = handler;
   } else {
     element.onclick = handler;
   }
+}
+
+function browserSupportsTouchEvents() {
+  var el = document.createElement('div');
+  el.setAttribute('ontouchstart', 'return;');
+  return typeof el.ontouchstart === "function";
 }
 
 function resetCalculator() {
