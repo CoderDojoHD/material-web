@@ -56,7 +56,7 @@ function plusClicked() {
 }
 
 function evaluateWithPlus() {
-  var displayedNumber = parseInt(displayText);
+  var displayedNumber = parseInt(displayText) || 0;
   storedNumber = storedNumber + displayedNumber;
   wasNumberStored = true;
   if (storedNumber <= 99999999999) {
